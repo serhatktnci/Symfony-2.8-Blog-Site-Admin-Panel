@@ -1,0 +1,44 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+homepage:
+    pattern:   /
+    defaults:  { _controller: AppBundle:Main:index }
+
+blog_list:
+    path:     /blog/{id}
+    defaults: { _controller: AppBundle:Blog:list }
+
+blog_show:
+    path:     /blogDetails/{slug}
+    defaults: { _controller: AppBundle:Blog:show }
+
+blog_search:
+    path:     /search
+    defaults: { _controller: AppBundle:Blog:search }
+
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /admin
+

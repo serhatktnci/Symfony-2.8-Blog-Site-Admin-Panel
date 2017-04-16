@@ -1,0 +1,37 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+  
+    <div class="col-sm-8 blog-main">
+            <div class="blog-post">
+               <h2 class="blog-post-title">{{ article.name }} </a></h2>
+               <p> {{ article.content }} </p>
+               <div class="addthis_sharing_toolbox"></div>
+            </div>
+    </div>
+
+
+{% endblock %}
+
+{% block stylesheets %}
+<style>
+.blog-post{
+    border: 1px dotted;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 10px;
+}
+.blog-nav{
+    text-align: center;
+    margin: 20px 0 10px 0;
+}
+
+a.blog-nav-item {
+    padding: 10px;
+    background: #337ab7;
+    color: #fff;
+    border-radius: 5px;
+}
+
+</style>
+{% endblock %}

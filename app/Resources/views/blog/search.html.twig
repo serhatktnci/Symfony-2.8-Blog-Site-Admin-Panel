@@ -1,0 +1,24 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    <div class="col-md-8">
+
+    {% for advert in adverts %}
+                   
+                <h1 class="page-header">
+                    <small>{{ advert.name }}</small>
+                </h1>
+
+                <h2>
+                    <a href="{{ path('blog_show', {slug: advert.slug}) }}">{{ advert.name }}</a>
+                </h2>
+                <a class="btn btn-primary" href="{{ path('blog_show', {slug: advert.slug}) }}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+                <hr>
+   {% endfor %}
+
+
+            </div>
+
+{% endblock %}
+
